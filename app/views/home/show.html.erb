@@ -1,0 +1,12 @@
+<h1>Anúncios</h1>
+<div>
+<ul>
+  <% @ads.each do |ad| %>
+    <li>
+      <p><strong><%= ad.title %></strong></p>
+      <p><%= ad.description %></p>
+      <p><%= number_to_currency(ad.price, :unit => 'R$') %></p>
+    </li>  
+  <% end %>
+</ul>
+</div>
